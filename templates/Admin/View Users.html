@@ -6,12 +6,13 @@
 </head>
 
 <body>
-<form action="" method="post">
+<form action="/myApp/viewUsers_post/" method="post">
+    {% csrf_token %}
 <table width="438" border="1">
   <tr>
     <td width="144">Username</td>
-    <td width="124"><label for="textfield"></label>
-      <input type="text" name="textfield" id="textfield" /></td>
+    <td width="124">
+      <input type="text" name="username" id="textfield" /></td>
     <td width="148"><input type="submit" name="button" id="button" value="Search" /></td>
   </tr>
 </table>

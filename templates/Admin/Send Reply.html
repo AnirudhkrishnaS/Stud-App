@@ -6,11 +6,13 @@
 </head>
 
 <body>
-<form action="" method="get">
+<form action="/myApp/sendReply_post/" method="post">
+    {% csrf_token %}
 <table width="324" border="1">
   <tr>
     <td width="58">Reply</td>
-    <td width="168"><label for="textfield"></label></td>
+    <td width="168"><label for="textfield"></label>
+        <textarea rows="" cols="" name="sendReply"></textarea></td>
     <td width="76"><input type="submit" name="submit" id="submit" value="Submit" /></td>
   </tr>
 </table>

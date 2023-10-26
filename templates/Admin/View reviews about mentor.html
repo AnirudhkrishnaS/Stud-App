@@ -6,15 +6,16 @@
 </head>
 
 <body>
-<form id="form1" name="form1" method="post" action="">
+<form id="form1" name="form1" method="post" action="/myApp/viewMentorReview_post/">
+    {% csrf_token %}
 <table width="560" border="1">
   <tr>
     <td width="105">From date</td>
     <td width="87"><label for="textfield"></label>
-      <input type="text" name="textfield" id="textfield" /></td>
+      <input type="date" name="fromDate" id="textfield" /></td>
     <td width="130">To date</td>
     <td width="105"><label for="textfield2"></label>
-      <input type="text" name="textfield2" id="textfield2" /></td>
+      <input type="date" name="toDate" id="textfield2" /></td>
     <td width="99"><input type="submit" name="Search" id="Search" value="Search" /></td>
   </tr>
 </table>
