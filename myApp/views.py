@@ -4,6 +4,9 @@ from django.shortcuts import render
 # Create your views here.
 
 ###################### admin functions#################################
+from myApp.models import *
+
+
 def login(request):
     return render(request , "Login.html")
 
@@ -32,7 +35,8 @@ def changePassword_post(request):
 
 
 def viewAndVerifyMentors(request):
-    return render(request , "admin/View and verify mentors.html")
+    res = Mentor.objects.all()
+    return render(request , "admin/View and verify mentors.html" , {'data' :res})
 
 def viewAndVerifyMentors_post(request):
     search = request.POST['search']

@@ -24,22 +24,26 @@
       <td width="82">Address</td>
       <td width="64">Email</td>
       <td width="58">Phone</td>
-      <td width="48">Photo</td>
+        <td width="48">course</td>
+
+
       <td width="36">&nbsp;</td>
       <td width="85">&nbsp;</td>
     </tr>
+      {% for i in data %}
     <tr>
-      <td height="195">&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td height="195">&nbsp;{{ forloop.counter }}</td>
+      <td> {{ i.name }}<br><img src = "{{ i.photo }}"></td>
+      <td>&nbsp;{{ i.dob }}</td>
+      <td>&nbsp;{{ i.state }}<br>{{ i.district }}<br>{{ i.city }}<br>{{ i.post }}<br>{{ i.pincode }}</td>
+      <td>&nbsp;{{ i.email }}</td>
+      <td>{{ i.phone }}&nbsp;</td>
+      <td>{{ i.course }}&nbsp;</td>
+      <td>&nbsp;{{ i.photo }}</td>
       <td><a href="#">Approve</a></td>
       <td><a href="#">Reject</a></td>
     </tr>
+      {% endfor %}
   </table>
   <p>&nbsp;</p>
 </form>
