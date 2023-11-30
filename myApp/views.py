@@ -13,8 +13,23 @@ def login(request):
 def login_post(request):
     user=request.POST['username']
     password = request.POST['password']
-    confirmNewPassword = request.POST['confirmPassword']
-    return HttpResponse('''<script>alert("Login successfully");window.location='/myApp/login/'</script>''')
+    obj = Login.objects.filter(username=user,password=password)
+
+    if obj.exists():
+        obj = Login.objects.get(username=user , password=password)
+        request.session['lid']=obj.id
+        if obj.type == 'admin':
+            return  HttpResponse('''<script>alert("success");window.location='/myApp/adminHome/'</script>''')
+        else:
+            return HttpResponse('''<script>alert(" user failed");window.location='/myApp/login/'</script>''')
+    else:
+        return HttpResponse('''<script>alert("login failed");window.location='/myApp/login/'</script>''')
+
+
+
+
+
+
 
 
 def adminHome(request):
@@ -31,25 +46,57 @@ def changePassword(request):
 def changePassword_post(request):
     old_password = request.POST['oldPassword']
     new_password = request.POST['newPassword']
-    return HttpResponse('''<script>alert("password changed successfully");window.location = '/myApp/changePassword /'</script>''')
+    confirmNewPassword = request.POST['confirmPassword']
+    obj = Login.objects.filter(id=request.session['lid'],password = old_password)
+    if obj.exists():
+        obj = Login.objects.get(id=request.session['lid'], password=old_password)
+
+        obj.password=new_password
+        obj.save()
+        return HttpResponse(
+            '''<script>alert("password changed successfully");window.location = '/myApp/login/'</script>''')
+
+    else:
+        return HttpResponse(
+            '''<script>alert("failed");window.location = '/myApp/changePassword /'</script>''')
 
 
 def viewAndVerifyMentors(request):
-    res = Mentor.objects.all()
+    res = Mentor.objects.filter(status = 'pending')
     return render(request , "admin/View and verify mentors.html" , {'data' :res})
 
 def viewAndVerifyMentors_post(request):
     search = request.POST['search']
-    return render(request , "admin/View and verify mentors.html")
+    res = Mentor.objects.filter(status = 'pending' ,name__icontains = search )
+    return render(request , "admin/View and verify mentors.html" , {'data':res})
+
+
+
+def ApproveMentor_post(request , id):
+    res = Mentor.objects.filter(LOGIN_id = id).update(status  = 'approved')
+    obj = Login.objects.filter(id = id).update(type = 'mentor')
+
+    return HttpResponse('''<script>alert("approved successfully");window.location = '/myApp/viewAndVerifyMentors/'</script>''')
+
+
+def RejectMentor_post(request , id):
+    res = Mentor.objects.filter(LOGIN_id = id).update(status = 'rejected')
+    obj = Login.objects.filter(id = id).update(type  = 'blocked')
+    return HttpResponse('''<script>alert("rejected successfully");window.location = '/myApp/viewAndVerifyMentors/'</script>''')
+
+
 
 
 def ApprovedMentors(request):
-    return render(request , "admin/View Approved mentors.html")
+    res = Mentor.objects.filter(status='approved')
+    return render(request , "admin/View Approved mentors.html" , {'data':res})
 
 
 def ApprovedMentors_post(request):
     search = request.POST['Search']
-    return render(request , "admin/View Approved mentors.html")
+    res = Mentor.objects.filter(status='approved', name__icontains=search)
+    return render(request, "admin/View Approved mentors.html", {'data': res})
+
 
 
 
@@ -57,63 +104,79 @@ def ApprovedMentors_post(request):
 
 
 def RejectedMentors(request):
-    return render(request , "admin/View Rejected mentors.html")
+    res = Mentor.objects.filter(status='rejected')
+    return render(request , "admin/View Rejected mentors.html" , {'data' :res})
+
 
 def RejectedMentors_post(request):
     search = request.POST['search']
-    return render(request, "admin/View Rejected mentors.html")
+    res = Mentor.objects.filter(status='rejected', name__icontains=search)
+    return render(request, "admin/View Rejected mentors.html" , {'data':res})
 
 
 
 
 def viewComplaints(request):
-    return render(request , "admin/View Complaint.html")
+    res = Complaint.objects.all()
+    return render(request , "admin/View Complaint.html" , {'data':res})
 
 def viewComplaints_post(request):
     fromDate = request.POST['fromDate']
     toDate = request.POST['toDate']
-    return render(request, "admin/View Complaint.html")
+    res = Complaint.objects.filter(date__range=[fromDate,toDate])
+    return render(request, "admin/View Complaint.html" , {'data' : res})
 
 
 
-def sendReply(request):
-    return render(request , "admin/Send Reply.html")
+def sendReply(request,id):
+    return render(request , "admin/Send Reply.html",{'id':id})
 
-def sendReply_post(request):
+
+
+def sendReply_post(request,id):
     sendReply = request.POST['sendReply']
-    return HttpResponse('''<script>alert("reply given");window.location = '/myApp/sendReply/'</script>''')
+    Complaint.objects.filter(id = id).update(reply = sendReply , status = 'send')
+    return HttpResponse('''<script>alert("reply given");window.location = '/myApp/viewComplaints/'</script>''')
 
 
 
 
 def viewMentorReview(request):
-    return render(request , "admin/View reviews about mentor.html")
+    res = Mentor_review.objects.all()
+
+    return render(request , "admin/View reviews about mentor.html" , {'data':res})
 
 def viewMentorReview_post(request):
     fromDate = request.POST['fromDate']
     toDate = request.POST['toDate']
-    return render(request, "admin/View reviews about mentor.html")
+    res = Mentor_review.objects.filter(date__range=[fromDate, toDate])
+    return render(request, "admin/View reviews about mentor.html" , {'data':res})
 
 
 
 
 def viewAppRating(request):
-    return render(request , "admin/View application reviews and ratings.html")
+    res  = App_reviews.objects.all()
+
+    return render(request , "admin/View application reviews and ratings.html" , {'data':res})
 
 def viewAppRating_post(request):
     fromDate = request.POST['fromDate']
     toDate = request.POST['toDate']
-    return render(request, "admin/View application reviews and ratings.html")
+    res = App_reviews.objects.filter(date__range=[fromDate, toDate])
+    return render(request, "admin/View application reviews and ratings.html" , {'data':res})
 
 
 
 
 def viewUsers(request):
-    return render(request , "admin/View Users.html")
+    res = User.objects.all()
+    return render(request , "admin/View Users.html" , {'data' : res})
 
 def viewUsers_post(request):
-    username = request.POST['username']
-    return render(request, "admin/View Users.html")
+    username = request.POST['usrch']
+    search = User.objects.filter(name__icontains = username)
+    return render(request, "admin/View Users.html" , {'data':search})
 
 
 

@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<form action="/myApp/sendReply_post/" method="post">
+<form action="/myApp/sendReply_post/{{ id }}" method="post">
     {% csrf_token %}
 <table width="324" border="1">
   <tr>

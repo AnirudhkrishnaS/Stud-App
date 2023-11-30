@@ -12,7 +12,7 @@
   <tr>
     <td width="144">Username</td>
     <td width="124">
-      <input type="text" name="username" id="textfield" /></td>
+      <input type="text" name="usrch"  /></td>
     <td width="148"><input type="submit" name="button" id="button" value="Search" /></td>
   </tr>
 </table>
@@ -25,19 +25,20 @@
     <td>Contact</td>
     <td>Dob</td>
     <td>Gender</td>
-    <td>Image</td>
     <td>Current Course</td>
   </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
+{% for i in data %}
+    <tr>
+      <td height="195">&nbsp;{{ forloop.counter }}</td>
+      <td> {{ i.name }}<br><img src = "{{ i.photo }}"></td>
+              <td>&nbsp;{{ i.state }}<br>{{ i.district }}<br>{{ i.city }}<br>{{ i.post }}<br>{{ i.pincode }}</td>
+        <td>&nbsp;{{ i.phone }}</td>
+      <td>&nbsp;{{ i.dob }}</td>
+      <td>{{ i.gender }}</td>
+      <td>{{ i.Currently_course }}&nbsp;</td>
+
+    </tr>
+      {% endfor %}
 </table>
 <p>&nbsp;</p>
 
