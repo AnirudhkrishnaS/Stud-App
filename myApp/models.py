@@ -37,6 +37,13 @@ class User(models.Model):
     Currently_course = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
 
+
+class Request_mentor(models.Model):
+    MENTOR = models.ForeignKey(Mentor , on_delete=models.CASCADE)
+    status = models.CharField(max_length= 100)
+    date = models.DateField()
+    USER = models.ForeignKey(User , on_delete=models.CASCADE)
+
 class Complaint(models.Model):
     LOGIN = models.ForeignKey(Login, on_delete=models.CASCADE)
     date = models.DateField()
@@ -76,8 +83,8 @@ class Chat(models.Model):
 class Session(models.Model):
     date = models.DateField()
     USER = models.ForeignKey(User, on_delete=models.CASCADE)
-    from_date = models.DateField()
-    to_date = models.DateField()
+    from_time = models.CharField(max_length=100)
+    to_time = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     document = models.CharField(max_length=100)
     MENTOR = models.ForeignKey(Mentor, on_delete=models.CASCADE)

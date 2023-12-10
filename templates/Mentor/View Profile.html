@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="" method="get">
+<table width="633" border="1">
+  <tr>
+    <td width="212"><p>Name</p></td>
+    <td width="405">{{ data.name }}</td>
+  </tr>
+  <tr>
+    <td>DOB</td>
+    <td>{{ data.dob }}
+     </td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td>{{ data.gender }}</td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td>{{ data.city }}<br>{{ data.post }}<br>{{ data.district }}<br>{{ data.pincode }}<br>{{ data.state }}
+     </td>
+  </tr>
+
+  <tr>
+    <td>Phone</td>
+    <td>{{ data.phone }}</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>{{ data.email }}</td>
+  </tr>
+  <tr>
+    <td>Course</td>
+    <td>{{ data.course }}</td>
+  </tr>
+  <tr>
+    <td>Photo</td>
+    <td>&nbsp; <img src="{{ data.photo }}" alt="photo" height = "60px" width = "60px"></td>
+  </tr>
+
+    <td>&nbsp;</td>
+    <td><a href="/myApp/EditProfile/">Edit Profile</a></td>
+  </tr>
+</table>
+
+</form>
+</body>
+</html>

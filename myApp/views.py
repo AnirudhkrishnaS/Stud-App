@@ -1,14 +1,15 @@
-from django.http import HttpResponse
+from django.core.files.storage.filesystem import FileSystemStorage
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
 
-###################### admin functions#################################
-from myApp.models import *
 
+from myApp.models import *
+########## for Admin & Mentor
 
 def login(request):
-    return render(request , "Login.html")
+    return render(request , "indexlogin.html    ")
 
 def login_post(request):
     user=request.POST['username']
@@ -20,6 +21,8 @@ def login_post(request):
         request.session['lid']=obj.id
         if obj.type == 'admin':
             return  HttpResponse('''<script>alert("success");window.location='/myApp/adminHome/'</script>''')
+        elif obj.type == 'mentor':
+            return HttpResponse('''<script>alert("success");window.location='/myApp/MentorHomePage/'</script>''')
         else:
             return HttpResponse('''<script>alert(" user failed");window.location='/myApp/login/'</script>''')
     else:
@@ -30,14 +33,10 @@ def login_post(request):
 
 
 
-
+############################################ admin functions  ########################################################
 
 def adminHome(request):
-    return render(request , "admin/home.html")
-
-
-
-
+    return render(request , "admin/adminIndex.html")
 
 
 def changePassword(request):
@@ -73,9 +72,8 @@ def viewAndVerifyMentors_post(request):
 
 
 def ApproveMentor_post(request , id):
-    res = Mentor.objects.filter(LOGIN_id = id).update(status  = 'approved')
+    res = Mentor.objects.filter(LOGIN = id).update(status  = 'approved')
     obj = Login.objects.filter(id = id).update(type = 'mentor')
-
     return HttpResponse('''<script>alert("approved successfully");window.location = '/myApp/viewAndVerifyMentors/'</script>''')
 
 
@@ -181,7 +179,668 @@ def viewUsers_post(request):
 
 
 
-#####################Mentor functions############################
+###########################################    Mentor functions   #########################################################
+
+def SignUp(request):
+    return render(request , "Mentor/Sign Up.html")
+
+
+
+def SignUp_Post(request):
+    name = request.POST['textfield']
+    dob = request.POST['textfield2']
+    gender = request.POST['radio']
+    city = request.POST['city']
+    post = request.POST['post']
+    district = request.POST['district']
+    pin = request.POST['pin']
+    state = request.POST['state']
+    phone = request.POST['textfield6']
+    email = request.POST['textfield7']
+    course = request.POST['textfield8']
+    photo = request.FILES['Upload']
+    password = request.POST['textfield9']
+    confirmPassword = request.POST['textfield10']
+
+
+    objLogin = Login()
+    objLogin.username = email
+    objLogin.password = password
+    objLogin.type = 'pending'
+    objLogin.save()
+
+
+    if password == confirmPassword:
+        objSignup = Mentor()
+        objSignup.name = name
+        objSignup.dob = dob
+        objSignup.gender = gender
+        objSignup.city = city
+        objSignup.post = post
+        objSignup.district = district
+        objSignup.pincode = pin
+        objSignup.state = state
+        objSignup.phone = phone
+        objSignup.email = email
+        objSignup.course = course
+
+        from datetime import datetime
+
+        date  =  datetime.now().strftime('%Y%m%d-%H%M%S')+'.jpg'
+
+        fs  =  FileSystemStorage()
+        fs.save(date , photo)
+        path = fs.url(date)
+        objSignup.photo = path
+
+
+
+        objSignup.LOGIN = objLogin
+        objSignup.status = 'pending'
+
+        objSignup.save()
+
+    return HttpResponse('''<script>alert("signUP success");window.location = '/myApp/login/'</script>''')
+
+
+
+
+
+def ViewProfile(request):
+    obj = Mentor.objects.get(LOGIN_id = request.session['lid'])
+    return render(request , "Mentor/View Profile.html" , {'data' : obj})
+
+
+
+
+def EditProfile(request):
+
+    obj = Mentor.objects.get(LOGIN_id = request.session['lid'])
+
+    return render(request , "Mentor/Edit profile.html" ,  {'data' : obj})
+
+
+
+def EditProfile_Post(request):
+    name = request.POST['textfield']
+    dob = request.POST['textfield2']
+    gender = request.POST['radio']
+    city = request.POST['city']
+    post = request.POST['post']
+    district = request.POST['district']
+    pin = request.POST['pin']
+    state = request.POST['state']
+    phone = request.POST['textfield6']
+    email = request.POST['textfield7']
+    course = request.POST['textfield8']
+    id = request.POST['id']
+
+    objSignup = Mentor.objects.get(id = id)
+
+    if 'Upload' in request.FILES:
+        photo = request.FILES['Upload']
+        from datetime import datetime
+        date = datetime.now().strftime('%Y%m%d-%H%M%S') + '.jpg'
+        fs = FileSystemStorage()
+        fs.save(date, photo)
+        path = fs.url(date)
+        objSignup.photo = path
+
+        objSignup.save()
+
+    objSignup.name = name
+    objSignup.dob = dob
+    objSignup.gender = gender
+    objSignup.city = city
+    objSignup.post = post
+    objSignup.district = district
+    objSignup.pincode = pin
+    objSignup.state = state
+    objSignup.phone = phone
+    objSignup.email = email
+    objSignup.course = course
+
+    objSignup.save()
+    return HttpResponse('''<script>alert("successfully edited");window.location = '/myApp/ViewProfile/'</script>''')
+
+
+
+def ViewMenteeRequest(request):
+    var = Request_mentor.objects.filter(status = "pending")
+    return render(request , "Mentor/View Mentor request.html" , {'data':var})
+
+
+def ViewMenteeRequest_post(request):
+    fromdate=request.POST['fromDate']
+    todate=request.POST['toDate']
+    var = Request_mentor.objects.filter(status = "pending",date__range=[fromdate,todate])
+    return render(request , "Mentor/View Mentor request.html" , {'data':var})
+
+
+
+
+def  ApproveUser(request, id):
+    var = Request_mentor.objects.filter(pk =id).update(status = "approved")
+    return HttpResponse('''<script>alert("approved");window.location = '/myApp/ViewMenteeRequest/'</script>''')
+
+
+
+def  RejectUser(request, id):
+    var = Request_mentor.objects.filter(pk =id).update(status = "rejected")
+    return HttpResponse('''<script>alert("rejected");window.location = '/myApp/ViewMenteeRequest/'</script>''')
+
+
+
+def AcceptedMentee(request):
+    var = Request_mentor.objects.filter(MENTOR__LOGIN_id = request.session['lid'] , status = "approved")
+    return render(request , "Mentor/AcceptedMentee.html" , {'data':var})
+
+
+
+def AcceptedMentee_post(request):
+    fromdate = request.POST['fromDate']
+    todate = request.POST['toDate']
+    var = Request_mentor.objects.filter(MENTOR__LOGIN_id = request.session['lid'] , status = "approved",date__range=[fromdate,todate])
+    return render(request , "Mentor/AcceptedMentee.html" , {'data':var})
+
+
+def RejectedMentee(request):
+    var = Request_mentor.objects.filter(MENTOR__LOGIN_id = request.session['lid'] ,status ="rejected")
+    return render(request , "Mentor/RejectedMentee.html" , {'data':var})
+
+
+def RejectedMentee_post(request):
+    fromdate = request.POST['fromDate']
+    todate = request.POST['toDate']
+    var = Request_mentor.objects.filter(MENTOR__LOGIN_id = request.session['lid'] ,status ="rejected",date__range=[fromdate,todate])
+    return render(request , "Mentor/RejectedMentee.html" , {'data':var})
+
+
+
+
+
+
+def  SendTips(request):
+
+    return render(request , "Mentor/Send tips to accepted user.html")
+
+
+
+def SendTips_post(request):
+    tips=request.POST['textfield']
+    obj = Tips()
+    obj.content = tips
+    from datetime import datetime
+    obj.date= datetime.now().strftime('%Y-%m-%d')
+    obj.MENTOR= Mentor.objects.get(LOGIN=request.session['lid'])
+    obj.save()
+    return HttpResponse('''<script>alert("Added");window.location = '/myApp/MentorHomePage/'</script>''')
+
+
+
+
+
+def  editTips(request,id):
+    var=Tips.objects.get(id=id)
+
+    return render(request , "Mentor/editTips.html",{'data':var})
+
+
+
+def editTips_post(request):
+    tips=request.POST['textfield']
+    tid=request.POST['tid']
+    obj = Tips.objects.get(id=tid)
+    obj.content = tips
+    from datetime import datetime
+    obj.date= datetime.now().strftime('%Y-%m-%d')
+    obj.MENTOR= Mentor.objects.get(LOGIN=request.session['lid'])
+    obj.save()
+    return HttpResponse('''<script>alert("updated");window.location = '/myApp/viewSendTips/'</script>''')
+
+
+
+def viewSendTips(request):
+    obj = Tips.objects.filter(MENTOR__LOGIN_id=request.session["lid"])
+    return render(request , "Mentor/view send tips .html",{"data":obj})
+
+def viewSendTips_post(request):
+    fromdate = request.POST['fromDate']
+    todate = request.POST['toDate']
+    obj = Tips.objects.filter(MENTOR__LOGIN_id=request.session["lid"],date__range=[fromdate,todate])
+    return render(request , "Mentor/view send tips .html",{"data":obj})
+
+
+def deleteTips(request,id):
+    var=Tips.objects.get(id=id).delete()
+    return HttpResponse('''<script>alert("deleted");window.location = '/myApp/viewSendTips/'</script>''')
+
+
+
+
+
+
+
+
+def  ManageSessions(request,id):
+
+    return render(request , "Mentor/ManageSession.html",{'id':id})
+
+def  ManageSessions_post(request):
+    fromTime=request.POST['textfield']
+    toTime=request.POST['textfield2']
+    title=request.POST['textfield4']
+    user=request.POST['id']
+    document=request.FILES['fileField']
+    from datetime import datetime
+
+    date = datetime.now().strftime('%Y%m%d-%H%M%S') + '.pdf'
+
+    fs = FileSystemStorage()
+    fs.save(date, document)
+    path = fs.url(date)
+    obj=Session()
+    from datetime import datetime
+    obj.date = datetime.now().strftime('%Y-%m-%d')
+    obj.from_time=fromTime
+    obj.to_time=toTime
+    obj.title=title
+    obj.document=path
+    obj.USER_id=user
+    obj.MENTOR= Mentor.objects.get(LOGIN=request.session['lid'])
+    obj.save()
+    return HttpResponse('''<script>alert("Added");window.location = '/myApp/MentorHomePage/'</script>''')
+
+def ViewSession(request,id):
+    var=Session.objects.filter(USER_id=id)
+    return render(request, "Mentor/View Session.html",{'data':var})
+
+
+def ViewSession_post(request):
+    fromdate = request.POST['textfield']
+    todate = request.POST['textfield2']
+    var=Session.objects.filter(date__range=[fromdate,todate])
+    return render(request, "Mentor/View Session.html",{'data':var})
+
+def deleteSession(request,id):
+    var=Session.objects.get(id=id).delete()
+    return HttpResponse('''<script>alert("deleted");window.location = '/myApp/AcceptedMentee/'</script>''')
+
+
+def  EditSessions(request,id):
+    res = Session.objects.get(id=id)
+
+    return render(request , "Mentor/EditSession.html",{'data':res})
+
+def  EditSessions_post(request):
+    fromTime=request.POST['textfield']
+    toTime=request.POST['textfield2']
+    title=request.POST['textfield4']
+
+    # user=request.POST['id']
+    id=request.POST['id']
+    obj=Session.objects.get(id=id)
+
+    if 'fileField' in request.FILES:
+        document=request.FILES['fileField']
+        from datetime import datetime
+        date = datetime.now().strftime('%Y%m%d-%H%M%S') + '.pdf'
+        fs = FileSystemStorage()
+        fs.save(date, document)
+        path = fs.url(date)
+        obj.document = path
+        obj.save()
+
+    from datetime import datetime
+    obj.date = datetime.now().strftime('%Y-%m-%d')
+    obj.from_time=fromTime
+    obj.to_time=toTime
+    obj.title=title
+    obj.save()
+    return HttpResponse('''<script>alert("Updated");window.location = '/myApp/AcceptedMentee/'</script>''')
+
+
+
+def  SendComplaint(request):
+
+    return render(request , "Mentor/Send complaint.html")
+
+
+def  SendComplaint_post(request):
+    complaint=request.POST['textfield']
+    obj=Complaint()
+    obj.complaint=complaint
+    from datetime import datetime
+    obj.date = datetime.now().strftime('%Y-%m-%d')
+    obj.reply="pending"
+    obj.status="pending"
+    obj.type="mentor"
+    lobj=Mentor.objects.get(LOGIN=request.session['lid'])
+    obj.LOGIN_id=lobj.LOGIN.id
+    obj.save()
+    return HttpResponse('''<script>alert("Sending");window.location = '/myApp/MentorHomePage/'</script>''')
+
+
+def  ViewReply(request):
+    var=Complaint.objects.filter(LOGIN=request.session['lid'])
+    return render(request , "Mentor/View Reply.html",{'data':var})
+
+def  ViewReply_post(request):
+    fromdate = request.POST['textfield']
+    todate = request.POST['textfield2']
+    var=Complaint.objects.filter(LOGIN=request.session['lid'],date__range=[fromdate,todate])
+    return render(request , "Mentor/View Reply.html",{'data':var})
+
+
+def  ChangePasswordMentor(request):
+
+    return render(request , "Mentor/Change Password Mentor.html")
+
+
+
+def changePasswordMentor_Post(request):
+    old_password = request.POST['oldPassword']
+    new_password = request.POST['newPassword']
+    confirmNewPassword = request.POST['confirmPassword']
+    obj = Login.objects.filter(id=request.session['lid'],password = old_password)
+    if obj.exists():
+        obj = Login.objects.get(id=request.session['lid'], password=old_password)
+
+        obj.password=new_password
+        obj.save()
+        return HttpResponse(
+            '''<script>alert("password changed successfully");window.location = '/myApp/login/'</script>''')
+
+    else:
+        return HttpResponse(
+            '''<script>alert("failed");window.location = '/myApp/ChangePasswordMentor/'</script>''')
+
+
+
+def MentorHomePage(request):
+
+    return render(request , "Mentor/MentorHomePage.html")
+
+
+
+
+#################################################### user ############################################################
+
+
+
+
+
+def and_login(request):
+    user = request.POST['username']
+    password = request.POST['password']
+    obj = Login.objects.filter(username=user, password=password)
+
+    if obj.exists():
+        obj = Login.objects.get(username=user, password=password)
+        request.session['lid'] = obj.id
+        if obj.type == 'user':
+                return JsonResponse({'status':'ok'})
+
+        else:
+            return JsonResponse({'status':'not ok'})
+
+    else:
+        return JsonResponse({'status': 'not ok'})
+
+
+
+def and_signUp(request):
+    name = request.POST['name']
+    dob = request.POST['dob']
+    gender = request.POST['gender']
+    photo = request.POST['photo']
+    state = request.POST['state']
+    district = request.POST['district']
+    city = request.POST['city']
+    post = request.POST['post']
+    pincode = request.POST['pincode']
+    phone = request.POST['phone']
+    Currently_course = request.POST['Currently_course']
+    email = request.POST['email']
+    password = request.POST['password']
+    obj = Login()
+    obj.username = email
+    obj.password = password
+    obj.type = 'user'
+    obj.save()
+
+    uobj = User()
+    uobj.name = name
+    uobj.dob = dob
+    uobj.gender  = gender
+    uobj.photo = photo
+    uobj.state = state
+    uobj.district = district
+    uobj.city = city
+    uobj.post = post
+    uobj.pincode = pincode
+    uobj.phone = phone
+    uobj.Currently_course = Currently_course
+    uobj.email = email
+    uobj.LOGIN = obj
+    uobj.save()
+
+    return JsonResponse({'status':'ok'})
+
+
+
+
+def and_viewProfile(request):
+    lid=request.POST['lid']
+    var = User.objects.get(LOGIN_id = lid)
+    return JsonResponse({'status':'ok'})
+
+
+
+def and_editProfile(request):
+    name = request.POST['name']
+    dob = request.POST['dob']
+    gender = request.POST['gender']
+    photo = request.POST['photo']
+    state = request.POST['state']
+    district = request.POST['district']
+    city = request.POST['city']
+    post = request.POST['post']
+    pincode = request.POST['pincode']
+    phone = request.POST['phone']
+    Currently_course = request.POST['Currently_course']
+    email = request.POST['email']
+
+
+    uobj = User()
+    uobj.name = name
+    uobj.dob = dob
+    uobj.gender = gender
+    uobj.photo = photo
+    uobj.state = state
+    uobj.district = district
+    uobj.city = city
+    uobj.post = post
+    uobj.pincode = pincode
+    uobj.phone = phone
+    uobj.Currently_course = Currently_course
+    uobj.email = email
+    uobj.save()
+
+    return JsonResponse({'status':'ok'})
+
+
+def and_sendComplaint(request):
+    complaint = request.POST['complaint']
+    lid=request.POST['lid']
+
+    obj = Complaint()
+    obj.complaint = complaint
+    obj.status = 'pending'
+    obj.reply = 'pending'
+    from datetime import datetime
+    obj.date = datetime.now().strftime('%Y-%m-%d')
+    lobj=User.objects.get(LOGIN_id=lid)
+    obj.LOGIN_id=lobj.LOGIN.id
+    obj.type = 'user'
+    obj.save()
+    return JsonResponse({'status':'ok'})
+
+def and_viewReply(request):
+    lid = request.POST['lid']
+    var = Complaint.objects.filter(LOGIN_id = lid)
+    l=[]
+    for i in var:
+        l.append({'id':i.id,'data':i.date , 'compaint':i.complaint , 'reply':i.reply})
+    return JsonResponse({'status':'ok','data':l})
+
+
+
+def and_changePassword(request):
+    old_password = request.POST['oldPassword']
+    new_password = request.POST['newPassword']
+    confirmNewPassword = request.POST['confirmPassword']
+    lid=request.POST['lid']
+    obj = Login.objects.filter(id=lid, password=old_password)
+    if obj.exists():
+        obj = Login.objects.get(id=lid, password=old_password)
+
+        obj.password = new_password
+        obj.save()
+        return JsonResponse({'status':'ok'})
+    else:
+        return JsonResponse({'status':'not ok'})
+
+
+
+def and_sendAppReview(request):
+    lid = request.POST['lid']
+    review = request.POST['review']
+    rating = request.POST['rating']
+    obj = App_reviews()
+    obj.review = review
+    obj.rating = rating
+    from datetime import datetime
+    obj.date = datetime.now().strftime('%Y-%m-%d')
+    obj.USER = User.objects.get(LOGIN_id = lid)
+    obj.save()
+
+    return JsonResponse({'status':'ok'})
+
+
+
+def and_sendMentorReview(request):
+    lid = request.POST['lid']
+    review = request.POST['review']
+    rating = request.POST['rating']
+    mid = request.POST['mid']
+    obj = App_reviews()
+    obj.review = review
+    obj.rating = rating
+    from datetime import datetime
+    obj.date = datetime.now().strftime('%Y-%m-%d')
+    obj.USER = User.objects.get(LOGIN_id=lid)
+    obj.MENTOR_id = mid
+    obj.save()
+
+    return JsonResponse({'status':'ok'})
+
+
+
+def and_viewMentor(request):
+    obj = Mentor.objects.filter(status = 'approved')
+    l = []
+    for i in obj:
+        l.append({'id':i.id ,
+                  'name':i.name ,
+                  'gender':i.gender ,
+                  'photo':i.photo,
+                  'dob':i.dob,
+                  'state':i.state,
+                  'district':i.district,
+                  'city':i.city,
+                  'post':i.post,
+                  'pincode':i.pincode,
+                  'phone':i.phone,
+                  'course':i.course,
+                  'email':i.email,})
+    return JsonResponse({'status':'ok','data':l})
+
+
+def and_sendRequest(request):
+    lid=request.POST['lid']
+    mid = request.POST['mid']
+    obj=Request_mentor()
+    from datetime import datetime
+    obj.date = datetime.now().strftime('%Y-%m-%d')
+    obj.status='pending'
+    obj.USER = User.objects.get(LOGIN_id=lid)
+    obj.MENTOR_id = mid
+    obj.save()
+    return JsonResponse({'status':'ok'})
+
+
+
+def and_viewSession(request):
+    mid = request.POST['mid']
+    obj=Session.objects.filter(MENTOR_id=mid)
+    l=[]
+    for i in obj:
+        l.append({'id':i.id,
+                  'date':i.date,
+                  'from_time':i.from_time,
+                  'to_time':i.to_time,
+                  'title':i.title,
+                  'document':i.document})
+    return JsonResponse({'status':'ok' , 'data':l})
+
+
+def and_viewRequestStatus(request):
+    lid = request.POST['lid']
+    var = Request_mentor.objects.filter(USER__LOGIN_id = lid)
+
+    return JsonResponse({'status':'ok' , 'data':var})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
