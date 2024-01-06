@@ -60,6 +60,10 @@ def changePassword_post(request):
             '''<script>alert("failed");window.location = '/myApp/changePassword /'</script>''')
 
 
+
+
+
+
 def viewAndVerifyMentors(request):
     res = Mentor.objects.filter(status = 'pending')
     return render(request , "admin/View and verify mentors.html" , {'data' :res})
@@ -571,15 +575,15 @@ def MentorHomePage(request):
 
 
 def and_login(request):
-    user = request.POST['username']
+    user = request.POST['name']
     password = request.POST['password']
     obj = Login.objects.filter(username=user, password=password)
 
     if obj.exists():
-        obj = Login.objects.get(username=user, password=password)
-        request.session['lid'] = obj.id
-        if obj.type == 'user':
-                return JsonResponse({'status':'ok'})
+        objj = Login.objects.get(username=user, password=password)
+
+        if objj.type == 'user':
+                return JsonResponse({'status':'ok',"type":objj.type,"lid":str(objj.id)})
 
         else:
             return JsonResponse({'status':'not ok'})
@@ -597,12 +601,29 @@ def and_signUp(request):
     state = request.POST['state']
     district = request.POST['district']
     city = request.POST['city']
+    print(city,"hiii")
+
     post = request.POST['post']
+    print(post,"kkkkk")
     pincode = request.POST['pincode']
     phone = request.POST['phone']
-    Currently_course = request.POST['Currently_course']
+    Currently_course = request.POST['currentlyCourse']
     email = request.POST['email']
     password = request.POST['password']
+    confirmPassword = request.POST['confirm_password']
+
+    import datetime
+    import base64
+    date = datetime.datetime.now().strftime("%Y%m%d%G%M%S")
+    a = base64.b64decode(photo)
+    fh = open("C:\\Users\\anini\PycharmProjects\\StudApp\media\\user\\" + date + ".jpg" , "wb")
+    path = "/media/user/"+date+".jpg"
+    fh.write(a)
+    fh.close()
+
+
+
+
     obj = Login()
     obj.username = email
     obj.password = password
@@ -613,7 +634,7 @@ def and_signUp(request):
     uobj.name = name
     uobj.dob = dob
     uobj.gender  = gender
-    uobj.photo = photo
+    uobj.photo = path
     uobj.state = state
     uobj.district = district
     uobj.city = city
@@ -632,8 +653,25 @@ def and_signUp(request):
 
 def and_viewProfile(request):
     lid=request.POST['lid']
+    print(lid,"jjjj")
     var = User.objects.get(LOGIN_id = lid)
-    return JsonResponse({'status':'ok'})
+
+    return JsonResponse({
+        'status':'ok',
+        "name":var.name,
+        "dob":var.dob,
+        "gender":var.gender,
+        "photo":var.photo,
+        "state":var.state,
+        "district":var.district,
+        "city":var.city,
+        "post":var.post,
+        "pincode":var.pincode,
+        "phone":var.phone,
+        "Currently_course":var.Currently_course,
+        "email":var.email
+
+    })
 
 
 
@@ -646,17 +684,40 @@ def and_editProfile(request):
     district = request.POST['district']
     city = request.POST['city']
     post = request.POST['post']
-    pincode = request.POST['pincode']
+    pincode = request.POST['pin']
     phone = request.POST['phone']
     Currently_course = request.POST['Currently_course']
     email = request.POST['email']
+    lid=request.POST['lid']
 
+    if len(photo)>0:
+        import datetime
+        import base64
+        date = datetime.datetime.now().strftime("%Y%m%d%G%M%S")
+        a = base64.b64decode(photo)
+        fh = open("C:\\Users\\anini\PycharmProjects\\StudApp\media\\user\\" + date + ".jpg", "wb")
+        path = "/media/user/" + date + ".jpg"
+        fh.write(a)
+        fh.close()
 
-    uobj = User()
+        uobj = User.objects.get(LOGIN__id=lid)
+        uobj.name = name
+        uobj.dob = dob
+        uobj.gender = gender
+        uobj.photo = path
+        uobj.state = state
+        uobj.district = district
+        uobj.city = city
+        uobj.post = post
+        uobj.pincode = pincode
+        uobj.phone = phone
+        uobj.Currently_course = Currently_course
+        uobj.email = email
+        uobj.save()
+    uobj = User.objects.get(LOGIN__id=lid)
     uobj.name = name
     uobj.dob = dob
     uobj.gender = gender
-    uobj.photo = photo
     uobj.state = state
     uobj.district = district
     uobj.city = city
@@ -666,7 +727,6 @@ def and_editProfile(request):
     uobj.Currently_course = Currently_course
     uobj.email = email
     uobj.save()
-
     return JsonResponse({'status':'ok'})
 
 
@@ -800,6 +860,10 @@ def and_viewRequestStatus(request):
     var = Request_mentor.objects.filter(USER__LOGIN_id = lid)
 
     return JsonResponse({'status':'ok' , 'data':var})
+
+
+
+
 
 
 

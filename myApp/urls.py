@@ -29,6 +29,7 @@ urlpatterns = [
     path("RejectMentor_post/<id>", views.RejectMentor_post),
 
 
+
 #####################################################  Mentor  ##################################################################
     path("SignUp/", views.SignUp),
     path("SignUp_Post/", views.SignUp_Post),
@@ -64,6 +65,27 @@ urlpatterns = [
     path("ViewReply_post/", views.ViewReply_post),
     path("viewSendTips_post/", views.viewSendTips_post),
     path("ViewSession_post/", views.ViewSession_post),
+
+
+    ###########################################user##################################################
+
+    path('and_login/',views.and_login),
+    path('and_signUp/',views.and_signUp),
+    path('and_viewProfile/',views.and_viewProfile),
+    path('and_editProfile/',views.and_editProfile),
+    path('and_sendComplaint/',views.and_sendComplaint),
+    path('and_viewReply/',views.and_viewReply),
+    path('and_changePassword/',views.and_changePassword),
+    path('and_sendAppReview/',views.and_sendAppReview),
+    path('and_sendMentorReview/',views.and_sendMentorReview),
+    path('and_viewMentor/',views.and_viewMentor),
+    path('and_sendRequest/',views.and_sendRequest),
+    path('and_viewSession/',views.and_viewSession),
+    path('and_viewRequestStatus/',views.and_viewRequestStatus),
+
+
+
+
 
 
 
