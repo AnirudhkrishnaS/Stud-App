@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="14a62bd3-8ba9-40fc-acfd-3a90287e88bc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/StudApp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudApp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudApp/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudApp/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudApp/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudApp/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231201-112210.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231201-112309.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231201-112744.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231201-125000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231201-125007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231209-161648.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231209-161805.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231209-161824.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231209-161845.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231209-161907.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231209-161932.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231209-164518.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231209-164731.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231209-164858.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231209-172409.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20231210-084213.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/migrations/0002_request_mentor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/migrations/0003_remove_session_from_date_remove_session_to_date_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/css/fontawesome-all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/css/lightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/css/popuo-box.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/gallery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/bg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/bg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/g1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/g2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/g3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/g4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/g5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/g6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/g7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/g8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/g9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/left1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/logo1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/logo2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/logo3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/right1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/t1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/t2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/t4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/te1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/te2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/te3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/te4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/ts1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/ts2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/ts3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/images/ts4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/js/jquery-2.2.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/js/jquery.countup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/js/jquery.magnific-popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/js/jquery.waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/js/lightbox-plus-jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/js/responsiveslides.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/services.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/typography.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/w3layouts-License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/home/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/images/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/static/logins/web/w3layouts-License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/Change Password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/Send Reply.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/View Approved mentors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/View Complaint.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/View Rejected mentors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/View Users.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/View and verify mentors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/View application reviews and ratings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/View reviews about mentor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/adminIndex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/AcceptedMentee.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/Change Password Mentor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/Edit profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/EditSession.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/ManageSession.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/MentorHomePage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/RejectedMentee.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/Send complaint.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/Send tips to accepted user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/Sign Up.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/View Mentor request.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/View Profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/View Reply.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/View Session.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/editTips.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Mentor/view send tips .html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/indexlogin.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2aaKuVPPRq6jWT4v1J8EeR5NIlZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Users/anini/PycharmProjects/StudApp/studappflutter",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14a62bd3-8ba9-40fc-acfd-3a90287e88bc" name="Changes" comment="" />
+      <created>1704551475504</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704551475504</updated>
+    </task>
+    <servers />
+  </component>
+</project>

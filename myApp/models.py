@@ -19,6 +19,7 @@ class Mentor(models.Model):
     pincode = models.CharField(max_length=10)
     phone = models.CharField(max_length=15)
     course = models.CharField(max_length=100)
+    qualification = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     status = models.CharField(max_length=10)
 

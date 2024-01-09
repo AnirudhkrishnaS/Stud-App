@@ -751,7 +751,7 @@ def and_viewReply(request):
     var = Complaint.objects.filter(LOGIN_id = lid)
     l=[]
     for i in var:
-        l.append({'id':i.id,'data':i.date , 'compaint':i.complaint , 'reply':i.reply})
+        l.append({'id':i.id,'date':i.date , 'complaint':i.complaint , 'reply':i.reply})
     return JsonResponse({'status':'ok','data':l})
 
 
@@ -788,6 +788,13 @@ def and_sendAppReview(request):
     return JsonResponse({'status':'ok'})
 
 
+def add_viewReview(request):
+    res = App_reviews.objects.all()
+    l = []
+    for i in res:
+        l.append({'id': i.id, 'date': i.date, 'review': i.review, 'rating': i.rating , 'user':i.USER.name})
+    return JsonResponse({'status': 'ok', 'data': l})
+
 
 def and_sendMentorReview(request):
     lid = request.POST['lid']
@@ -807,24 +814,37 @@ def and_sendMentorReview(request):
 
 
 
-def and_viewMentor(request):
+def and_viewMentors(request):
     obj = Mentor.objects.filter(status = 'approved')
     l = []
     for i in obj:
         l.append({'id':i.id ,
                   'name':i.name ,
-                  'gender':i.gender ,
                   'photo':i.photo,
-                  'dob':i.dob,
-                  'state':i.state,
-                  'district':i.district,
-                  'city':i.city,
-                  'post':i.post,
-                  'pincode':i.pincode,
-                  'phone':i.phone,
                   'course':i.course,
-                  'email':i.email,})
+
+
+                  }
+                 )
     return JsonResponse({'status':'ok','data':l})
+
+
+def and_viewMentorDetail(request):
+    mid=request.POST['mid']
+    var = Mentor.objects.get(id=mid)
+    return JsonResponse({
+        'status': 'ok',
+        "name": var.name,
+        "photo": var.photo,
+        "phone": var.phone,
+        "city":var.city,
+        "Currently_course": var.course,
+        'qualification': var.qualification,
+        "email": var.email
+
+
+    })
+
 
 
 def and_sendRequest(request):
