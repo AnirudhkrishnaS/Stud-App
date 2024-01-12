@@ -801,7 +801,7 @@ def and_sendMentorReview(request):
     review = request.POST['review']
     rating = request.POST['rating']
     mid = request.POST['mid']
-    obj = App_reviews()
+    obj = Mentor_review()
     obj.review = review
     obj.rating = rating
     from datetime import datetime
@@ -834,6 +834,7 @@ def and_viewMentorDetail(request):
     var = Mentor.objects.get(id=mid)
     return JsonResponse({
         'status': 'ok',
+        "id": var.id,
         "name": var.name,
         "photo": var.photo,
         "phone": var.phone,
@@ -863,7 +864,10 @@ def and_sendRequest(request):
 
 def and_viewSession(request):
     mid = request.POST['mid']
-    obj=Session.objects.filter(MENTOR_id=mid)
+    lid = request.POST['lid']
+    print(mid)
+    print(lid)
+    obj=Session.objects.filter(MENTOR_id=mid,USER__LOGIN_id = lid)
     l=[]
     for i in obj:
         l.append({'id':i.id,
@@ -877,9 +881,28 @@ def and_viewSession(request):
 
 def and_viewRequestStatus(request):
     lid = request.POST['lid']
-    var = Request_mentor.objects.filter(USER__LOGIN_id = lid)
+    obj = Request_mentor.objects.filter(USER__LOGIN_id = lid,)
+    l = []
+    for i in obj:
+        l.append({'id': i.id,
+                  'date': i.date,
+                  'status': i.status,
+                  'mentorName': i.MENTOR.name,
+                  'mid': i.MENTOR.id,
+                  })
+    return JsonResponse({'status':'ok' , 'data':l})
 
-    return JsonResponse({'status':'ok' , 'data':var})
+def and_viewMyMentors(request):
+    lid = request.POST['lid']
+    obj = Request_mentor.objects.filter(USER__LOGIN_id = lid,status="approved")
+    l = []
+    for i in obj:
+        l.append({'id': i.MENTOR.id,
+                  'name': i.MENTOR.name,
+                  'photo':i.MENTOR.photo,
+                  'course':i.MENTOR.course,
+                  })
+    return JsonResponse({'status':'ok' , 'data':l})
 
 
 

@@ -80,6 +80,7 @@ urlpatterns = [
     path('add_viewReview/',views.add_viewReview),
     path('and_sendMentorReview/',views.and_sendMentorReview),
     path('and_viewMentors/',views.and_viewMentors),
+    path('and_viewMyMentors/',views.and_viewMyMentors),
     path('and_viewMentorDetail/',views.and_viewMentorDetail),
     path('and_sendRequest/',views.and_sendRequest),
     path('and_viewSession/',views.and_viewSession),
