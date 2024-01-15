@@ -901,8 +901,91 @@ def and_viewMyMentors(request):
                   'name': i.MENTOR.name,
                   'photo':i.MENTOR.photo,
                   'course':i.MENTOR.course,
+                  'mlid':i.MENTOR.LOGIN.id
                   })
     return JsonResponse({'status':'ok' , 'data':l})
+
+def user_view_chat(request):
+    from_id=request.POST['from_id']
+    to_id=request.POST['to_id']
+
+    l=[]
+    data1=Chat.objects.filter(FROM_ID=from_id,TO_ID=to_id).order_by('id')
+    data2=Chat.objects.filter(FROM_ID=to_id ,TO_ID=from_id).order_by('id')
+    data=data1 | data2
+    print(data)
+    for res in data:
+        l.append({'id':res.id,'from':res.FROM_ID.id,'to':res.TO_ID.id,'date':res.date,'msg':res.message})
+
+    return  JsonResponse({'status':'ok','data':l})
+
+def user_send_chat(request):
+    from_id = request.POST['from_id']
+    to_id = request.POST['to_id']
+    print("aaaaaa"+from_id+' to:'+to_id)
+    msg=request.POST['message']
+    from datetime import datetime
+    c=Chat()
+    # uu=User.objects.get(LOGIN=from_id)
+    c.FROM_ID_id=from_id
+    c.TO_ID_id=to_id
+    c.message=msg
+    c.date=datetime.now()
+    c.save()
+    return JsonResponse({'status':'ok'})
+
+
+
+#===mentor chat======
+def chat(request, id):
+    if request.session['lid']!='':
+        request.session["userid"] = id
+        cid = str(request.session["userid"])
+        request.session["new"] = cid
+        qry = User.objects.get(LOGIN=cid)
+
+        return render(request, "Mentor/Chat.html", {'photo': qry.photo, 'name': qry.name, 'toid': cid})
+    else:
+        return HttpResponse('''<script>alert('You are not Logined');window.location='/myapp/login/'</script>''')
+
+
+def chat_view(request):
+    if request.session['lid']!='':
+        fromid = request.session["lid"]
+        toid = request.session["userid"]
+        qry = User.objects.get(LOGIN=request.session["userid"])
+        from django.db.models import Q
+
+        res = Chat.objects.filter(Q(FROM_ID=fromid, TO_ID=toid) | Q(FROM_ID=toid, TO_ID=fromid))
+        l = []
+
+        for i in res:
+            l.append({"id": i.id, "message": i.message, "to": i.TO_ID_id, "date": i.date, "from": i.FROM_ID_id})
+
+        return JsonResponse({'status':'ok','photo': qry.photo, "data": l, 'name': qry.name, 'toid': request.session["userid"]})
+    else:
+        return HttpResponse('''<script>alert('You are not Logined');window.location='/myapp/login/'</script>''')
+
+
+def chat_send(request, msg):
+    if request.session['lid']!='':
+        lid = request.session["lid"]
+        toid = request.session["userid"]
+        message = msg
+
+        import datetime
+        d = datetime.datetime.now().date()
+        chatobt = Chat()
+        chatobt.message = message
+        chatobt.TO_ID_id = toid
+        chatobt.FROM_ID_id = lid
+        chatobt.date = d
+        chatobt.save()
+    else:
+        return HttpResponse('''<script>alert('You are not Logined');window.location='/myapp/login/'</script>''')
+
+
+    return JsonResponse({"status": "ok"})
 
 
 

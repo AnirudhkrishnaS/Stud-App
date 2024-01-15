@@ -66,6 +66,11 @@ urlpatterns = [
     path("viewSendTips_post/", views.viewSendTips_post),
     path("ViewSession_post/", views.ViewSession_post),
 
+    path('chat/<id>',views.chat),
+    path('chat_view/',views.chat_view),
+    path('chat_send/<msg>',views.chat_send),
+
+
 
     ###########################################user##################################################
 
@@ -85,6 +90,10 @@ urlpatterns = [
     path('and_sendRequest/',views.and_sendRequest),
     path('and_viewSession/',views.and_viewSession),
     path('and_viewRequestStatus/',views.and_viewRequestStatus),
+    path('user_view_chat/', views.user_view_chat),
+    path('user_send_chat/', views.user_send_chat),
+
+
 
 
 
