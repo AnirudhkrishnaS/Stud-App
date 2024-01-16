@@ -1,30 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
-
-<body>
+{% extends 'Admin/adminHomePage.html' %}
+{% block body %}
 <form id="form1" name="form1" method="post" action="/myApp/RejectedMentors_post/">
     {% csrf_token %}
-  <table width="323" border="1">
+<table class="px pull-left">
     <tr>
-      <td width="179"><label for="textfield"></label>
+      <td >
       <input type="text" name="search" id="textfield" /></td>
-      <td width="128"><input type="submit" name="Go" id="submit" value="Go" /></td>
+      <td ><input type="submit" class="form-control" name="Go" id="submit" value="Go" /></td>
     </tr>
   </table>
-  <table width="768" border="1">
+  <table class=" table table-bordered">
     <tr>
-      <td width="113" height="108">Sl no</td>
-      <td width="85">Name</td>
-      <td width="71">DOB</td>
-      <td width="62">Gender</td>
-      <td width="82">Address</td>
-      <td width="64">Email</td>
-      <td width="58">Phone</td>
-      <td width="48">course</td>
+      <td>Sl no</td>
+        <td>Name</td>
+      <td>DOB</td>
+      <td>Gender</td>
+      <td>Address</td>
+      <td>Email</td>
+      <td>Phone</td>
+      <td>course</td>
+        <td>Qualification</td>
     
     </tr>
    {% for i in data %}
@@ -37,11 +32,11 @@
       <td>&nbsp;{{ i.email }}</td>
       <td>{{ i.phone }}</td>
       <td>{{ i.course }}&nbsp;</td>
+    <td>{{ i.qualification }}</td>
 
     </tr>
       {% endfor %}
   </table>
   <p>&nbsp;</p>
 </form>
-</body>
-</html>
+{% endblock %}

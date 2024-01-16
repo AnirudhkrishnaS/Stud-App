@@ -2,14 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="915c57b5-5483-4b30-b5a9-0f376cc39231" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/chat_style/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/chat_style/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/chat_style/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Mentor/Chat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/about.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/p1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/p2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/p3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/p4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/p5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/p6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/s1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/s2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/s3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/s4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/s5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/slide1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/slide2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/slide3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/slide4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/team1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/team2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/team3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/images/team4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/css/style-starter.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/js/jquery-3.3.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/js/jquery.magnific-popup.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/js/owl.carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/assets/js/theme-change.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/contact.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myApp/static/adminHome/starter-license-W3Layouts.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Admin/adminHomePage.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/Admin/adminIndex.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myApp/urls.py" afterPath="$PROJECT_DIR$/myApp/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myApp/views.py" afterPath="$PROJECT_DIR$/myApp/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Mentor/AcceptedMentee.html" afterPath="$PROJECT_DIR$/templates/Mentor/AcceptedMentee.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Admin/Change Password.html" afterPath="$PROJECT_DIR$/templates/Admin/Change Password.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Admin/Send Reply.html" afterPath="$PROJECT_DIR$/templates/Admin/Send Reply.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Admin/View Approved mentors.html" afterPath="$PROJECT_DIR$/templates/Admin/View Approved mentors.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Admin/View Complaint.html" afterPath="$PROJECT_DIR$/templates/Admin/View Complaint.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Admin/View Rejected mentors.html" afterPath="$PROJECT_DIR$/templates/Admin/View Rejected mentors.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Admin/View Users.html" afterPath="$PROJECT_DIR$/templates/Admin/View Users.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Admin/View and verify mentors.html" afterPath="$PROJECT_DIR$/templates/Admin/View and verify mentors.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Admin/View application reviews and ratings.html" afterPath="$PROJECT_DIR$/templates/Admin/View application reviews and ratings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Admin/View reviews about mentor.html" afterPath="$PROJECT_DIR$/templates/Admin/View reviews about mentor.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,105 +77,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myApp/views.py">
+      <file leaf-file-name="adminHomePage.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/Admin/adminHomePage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="937" column="0" lean-forward="true" selection-start-line="907" selection-start-column="0" selection-end-line="937" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AcceptedMentee.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Mentor/AcceptedMentee.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+            <state relative-caret-position="19560">
+              <caret line="652" column="30" lean-forward="false" selection-start-line="652" selection-start-column="25" selection-end-line="652" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chat.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Mentor/Chat.html">
+      <file leaf-file-name="style-starter.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/css/style-starter.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="470" column="24" lean-forward="false" selection-start-line="470" selection-start-column="24" selection-end-line="470" selection-end-column="24" />
+            <state relative-caret-position="320070">
+              <caret line="10669" column="24" lean-forward="false" selection-start-line="10669" selection-start-column="24" selection-end-line="10669" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myApp/static/chat_style/jquery.min.js">
+      <file leaf-file-name="View Complaint.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Admin/View Complaint.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="480">
+              <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/myApp/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="93" column="50" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="93" selection-end-column="50" />
-              <folding>
-                <element signature="e#1#33#0" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="slide1.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/images/slide1.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="slide2.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/images/slide2.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="s4.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/images/s4.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="s3.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/images/s3.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View reviews about mentor.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Admin/View reviews about mentor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="420">
+              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View and verify mentors.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Admin/View and verify mentors.html">
+      <file leaf-file-name="View application reviews and ratings.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Admin/View application reviews and ratings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+            <state relative-caret-position="360">
+              <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StudApp/urls.py">
+      <file leaf-file-name="View Approved mentors.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Admin/View Approved mentors.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StudApp/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myApp/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="9" />
+            <state relative-caret-position="120">
+              <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -151,32 +176,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ApprovedMentors</find>
-      <find>viewUsers</find>
-      <find>viewMentorReview</find>
-      <find>viewAppRating_post</find>
-      <find>login</find>
-      <find>ApproveMentor_post</find>
-      <find>requ</find>
-      <find>RejectedMentee</find>
-      <find>path</find>
-      <find>adm</find>
-      <find>sign</find>
-      <find>images</find>
-      <find>href=&quot;css</find>
-      <find>src=&quot;images</find>
-      <find>.css</find>
-      <find>css</find>
-      <find>.js</find>
-      <find>hiii</find>
-      <find>lib</find>
-      <find>and_viewMentors</find>
-      <find>mentor</find>
-      <find>chat</find>
-      <find>chat_view</find>
-      <find>chat_send</find>
       <find>lca</find>
       <find>and_viewMyMentors</find>
+      <find>js/</find>
+      <find>image</find>
+      <find>blog</find>
+      <find>about</find>
+      <find>Mentors</find>
+      <find>interior</find>
+      <find>view users</find>
+      <find>mentors</find>
+      <find>others</find>
+      <find>what ma</find>
+      <find>view and</find>
+      <find>view complaint</find>
+      <find>vkiew com</find>
+      <find>slider-</find>
+      <find>btn-sty</find>
+      <find>logout</find>
+      <find>lab</find>
+      <find>move</find>
+      <find>.w31-foo</find>
+      <find>Our serv</find>
+      <find>btn</find>
+      <find>contact</find>
+      <find>home</find>
+      <find>btn-primary</find>
+      <find>services</find>
+      <find>stylish hom</find>
+      <find>img</find>
+      <find>slide</find>
     </findStrings>
     <replaceStrings>
       <replace>href=&quot;/static/home/images</replace>
@@ -189,15 +218,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/Login.html" />
-        <option value="$PROJECT_DIR$/templates/Admin/Change Password.html" />
-        <option value="$PROJECT_DIR$/templates/Admin/Send Reply.html" />
-        <option value="$PROJECT_DIR$/templates/Admin/View reviews about mentor.html" />
-        <option value="$PROJECT_DIR$/templates/Admin/View Complaint.html" />
-        <option value="$PROJECT_DIR$/templates/Admin/View application reviews and ratings.html" />
-        <option value="$PROJECT_DIR$/templates/Admin/View Users.html" />
         <option value="$PROJECT_DIR$/StudApp/urls.py" />
         <option value="$PROJECT_DIR$/templates/Mentor/Sign Up.html" />
-        <option value="$PROJECT_DIR$/templates/Admin/View and verify mentors.html" />
         <option value="$PROJECT_DIR$/templates/Mentor/View Profile.html" />
         <option value="$PROJECT_DIR$/templates/Mentor/Edit profile.html" />
         <option value="$PROJECT_DIR$/templates/Mentor/Change Password Mentor.html" />
@@ -213,8 +235,6 @@
         <option value="$PROJECT_DIR$/templates/Mentor/View Session.html" />
         <option value="$PROJECT_DIR$/templates/Mentor/MentorHomePage.html" />
         <option value="$PROJECT_DIR$/templates/indexlogin.html" />
-        <option value="$PROJECT_DIR$/templates/Admin/View Approved mentors.html" />
-        <option value="$PROJECT_DIR$/templates/Admin/View Rejected mentors.html" />
         <option value="$PROJECT_DIR$/templates/Admin/home.html" />
         <option value="$PROJECT_DIR$/templates/Admin/adminIndex.html" />
         <option value="$PROJECT_DIR$/templates/Admin/about.html" />
@@ -223,9 +243,20 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/myApp/models.py" />
         <option value="$PROJECT_DIR$/myApp/urls.py" />
-        <option value="$PROJECT_DIR$/myApp/views.py" />
         <option value="$PROJECT_DIR$/templates/Mentor/AcceptedMentee.html" />
         <option value="$PROJECT_DIR$/templates/Mentor/Chat.html" />
+        <option value="$PROJECT_DIR$/templates/Admin/View Users.html" />
+        <option value="$PROJECT_DIR$/templates/Admin/Send Reply.html" />
+        <option value="$PROJECT_DIR$/myApp/views.py" />
+        <option value="$PROJECT_DIR$/templates/Admin/Change Password.html" />
+        <option value="$PROJECT_DIR$/templates/Admin/View and verify mentors.html" />
+        <option value="$PROJECT_DIR$/templates/Admin/View Approved mentors.html" />
+        <option value="$PROJECT_DIR$/templates/Admin/View Rejected mentors.html" />
+        <option value="$PROJECT_DIR$/templates/Admin/View reviews about mentor.html" />
+        <option value="$PROJECT_DIR$/templates/Admin/View application reviews and ratings.html" />
+        <option value="$PROJECT_DIR$/myApp/static/adminHome/assets/css/style-starter.css" />
+        <option value="$PROJECT_DIR$/templates/Admin/adminHomePage.html" />
+        <option value="$PROJECT_DIR$/templates/Admin/View Complaint.html" />
       </list>
     </option>
   </component>
@@ -236,10 +267,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1918" />
-    <option name="height" value="1018" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -312,6 +343,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="StudApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -366,7 +415,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chat_style" />
+              <option name="myItemId" value="adminHome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adminHome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adminHome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,15 +487,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\anini\PycharmProjects\StudApp\myApp\static" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anini\PycharmProjects\StudApp\templates\Admin" />
       <recent name="C:\Users\anini\PycharmProjects\StudApp\myApp\static" />
       <recent name="C:\Users\anini\PycharmProjects\StudApp\templates\Mentor" />
-      <recent name="C:\Users\anini\PycharmProjects\StudApp\templates\Admin" />
       <recent name="C:\Users\anini\PycharmProjects\StudApp\static" />
       <recent name="C:\Users\anini\PycharmProjects\StudApp\static\home" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\anini\PycharmProjects\StudApp\myApp\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -581,8 +686,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="DJANGO_SETTINGS_MODULE" value="StudApp.settings" />
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="StudApp.settings" />
       </envs>
       <option name="SDK_HOME" value="C:\Python311\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -631,20 +736,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1918" height="1018" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2383279" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24221267" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17525773" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17936695" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972856" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3094959" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -687,70 +792,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/Mentor/Sign Up.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Admin/Change Password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/static/logins/lweb/web/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/templates/Mentor/Change Password Mentor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="9" column="87" lean-forward="false" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Mentor/Edit profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/static/logins/lweb/web/index.html" />
-    <entry file="file://$PROJECT_DIR$/templates/Login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/static/logins/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/static/logins/web/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/static/logins/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/static/logins/web/images/bg.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/logins/web/css/style.css" />
     <entry file="file://$PROJECT_DIR$/static/logins/web/index.html" />
     <entry file="file://$PROJECT_DIR$/templates/Mentor/Send tips to accepted user.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -808,13 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Admin/View Complaint.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="27" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Mentor/RejectedMentee.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -850,27 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Admin/View Approved mentors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Admin/View Rejected mentors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Admin/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/home/adminIndex.html" />
     <entry file="file://$PROJECT_DIR$/myApp/static/home/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -898,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,19 +922,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Admin/adminIndex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="139" column="69" lean-forward="false" selection-start-line="139" selection-start-column="69" selection-end-line="139" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studAppFlutter/.gitignore" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,7 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,59 +957,169 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Admin/View and verify mentors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Mentor/AcceptedMentee.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="1380">
           <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Mentor/Chat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
+        <state relative-caret-position="14100">
           <caret line="470" column="24" lean-forward="false" selection-start-line="470" selection-start-column="24" selection-end-line="470" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2652">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#33#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/adminIndex.html" />
+    <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/js/owl.carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/View Users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="82" lean-forward="false" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/Send Reply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myApp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="937" column="0" lean-forward="true" selection-start-line="907" selection-start-column="0" selection-end-line="937" selection-end-column="0" />
+        <state relative-caret-position="376">
+          <caret line="57" column="9" lean-forward="true" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/Change Password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/View and verify mentors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding>
-            <element signature="e#0#66#0" expanded="true" />
+            <element signature="e#737#743#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/Admin/View Rejected mentors.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="93" column="50" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="93" selection-end-column="50" />
-          <folding>
-            <element signature="e#1#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/View reviews about mentor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/View application reviews and ratings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/css/style-starter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320070">
+          <caret line="10669" column="24" lean-forward="false" selection-start-line="10669" selection-start-column="24" selection-end-line="10669" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/View Complaint.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/images/slide2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/images/s4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/images/s3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/static/adminHome/assets/images/slide1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/adminHomePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19560">
+          <caret line="652" column="30" lean-forward="false" selection-start-line="652" selection-start-column="25" selection-end-line="652" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Admin/View Approved mentors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

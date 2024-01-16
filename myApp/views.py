@@ -36,7 +36,7 @@ def login_post(request):
 ############################################ admin functions  ########################################################
 
 def adminHome(request):
-    return render(request , "admin/adminIndex.html")
+    return render(request , "admin/adminHomePage.html")
 
 
 def changePassword(request):
@@ -57,7 +57,7 @@ def changePassword_post(request):
 
     else:
         return HttpResponse(
-            '''<script>alert("failed");window.location = '/myApp/changePassword /'</script>''')
+            '''<script>alert("failed");window.location = '/myApp/changePassword/'</script>''')
 
 
 
